@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="SHINGALA, D. — Product · Content · IT Operations">
+  <defs>
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Berkeley Mono', 'SF Mono', Menlo, Consolas, monospace; }
+      .ink   { fill: #15140f; }
+      .muted { fill: #6b6450; }
+      .accent { fill: #983623; }
+      .rule { stroke: #15140f; stroke-width: 1; fill: none; }
+      .rule-fine { stroke: #b6ad94; stroke-width: 0.5; fill: none; }
+    </style>
+  </defs>
+
+  <line class="rule" x1="48" y1="38" x2="1152" y2="38" />
+  <line class="rule-fine" x1="48" y1="44" x2="1152" y2="44" />
+
+  <text class="mono muted" x="48" y="28" font-size="11" letter-spacing="3">REF · DRS-001 · OPEN</text>
+  <text class="mono muted" x="1152" y="28" font-size="11" letter-spacing="3" text-anchor="end">FILED · 2026 · 05 · 19</text>
+
+  <g transform="translate(48,80) rotate(-6)">
+    <rect x="0" y="0" width="118" height="36" fill="none" stroke="#983623" stroke-width="1.4" />
+    <text class="mono accent" x="59" y="22" font-size="11" letter-spacing="3" text-anchor="middle">CONFIRMED</text>
+  </g>
+
+  <text class="mono ink" x="600" y="170" font-size="78" font-weight="600" letter-spacing="4" text-anchor="middle">SHINGALA, D.</text>
+  <line class="rule-fine" x1="430" y1="190" x2="770" y2="190" />
+  <text class="mono muted" x="600" y="218" font-size="13" letter-spacing="8" text-anchor="middle">PRODUCT &#x2022; CONTENT &#x2022; IT OPERATIONS</text>
+
+  <line class="rule-fine" x1="48" y1="262" x2="1152" y2="262" />
+  <line class="rule" x1="48" y1="268" x2="1152" y2="268" />
+
+  <text class="mono muted" x="48" y="290" font-size="11" letter-spacing="3">FILED UNDER &#x2022; ITSM &#x2022; OBSERVABILITY &#x2022; CONTENT STRATEGY</text>
+  <text class="mono muted" x="1152" y="290" font-size="11" letter-spacing="3" text-anchor="end">ENTRY &#x2116; 1</text>
+</svg>
