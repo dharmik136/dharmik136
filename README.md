@@ -42,7 +42,7 @@ Active files. Most recent first.
 <tbody>
 <tr>
   <td><code>DRS-001</code></td>
-  <td><a href="https://github.com/shingaladharmikmotadata/claude-enter">claude-enter</a> &mdash; scheduled VK_RETURN injector, Windows. Pure stdlib + Win32.</td>
+  <td><a href="https://github.com/dharmik136/claude-enter">claude-enter</a> &mdash; scheduled VK_RETURN injector, Windows. Pure stdlib + Win32.</td>
   <td>workflow automation</td>
   <td><sub>SHIPPED &middot; v0.1.0</sub></td>
 </tr>
