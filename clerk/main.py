@@ -35,7 +35,6 @@ def run(repo_dir: str, token: str) -> None:
 
 
 if __name__ == "__main__":
-    import sys
     run(repo_dir=".", token=os.environ.get("DOSSIER_READ_TOKEN")
         or os.environ["GITHUB_TOKEN"])
     print("clerk: dossier re-filed")
