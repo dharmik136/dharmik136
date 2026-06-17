@@ -125,10 +125,16 @@ def gather(cfg, readme_text: str, token: str) -> DossierData:
     for ref in cfg.refs:
         if ref.get("manual_status") or not ref.get("repo"):
             refs.append(ref_status_from_signals(ref, None, cfg.dormant_days))
-        else:
+            continue
+        try:
             sig = fetch_repo_signals(ref["repo"], token)
             refs.append(ref_status_from_signals(ref, sig, cfg.dormant_days))
-    events = fetch_public_events(cfg.user, token)
+        except Exception:
+            refs.append(ref_status_from_signals(ref, None, cfg.dormant_days))
+    try:
+        events = fetch_public_events(cfg.user, token)
+    except Exception:
+        events = []
     return DossierData(
         rev=rev_count(),
         seal=seal_hash(readme_text),

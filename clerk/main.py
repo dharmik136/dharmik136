@@ -1,4 +1,5 @@
 import os
+from datetime import datetime, timezone
 
 from clerk.config import load_config
 from clerk.data import gather  # patched in tests
@@ -25,8 +26,9 @@ def run(repo_dir: str, token: str) -> None:
     render_doctrine(cfg, out_dir=assets)
     render_status(data.refs, out_dir=assets)
 
+    today = datetime.now(timezone.utc).strftime("%Y·%m·%d")
     footer = (f"FILED {data.filed} · ENTRY No.1 · THIS DOSSIER IS LIVE "
-              f"(re-filed {data.filed})")
+              f"(re-filed {today})")
     readme = replace_section(readme, "FOOTER", footer)
     readme = replace_section(readme, "FIELDLOG", render_fieldlog(data.field_log))
 
