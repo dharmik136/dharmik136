@@ -22,18 +22,17 @@ def _variant(cfg, font, ink, cursor_fill):
         glyphs = outline_text(font, line, x=PAD, baseline=baseline, fill=ink)
         body.append(
             f'<clipPath id="{clip_id}"><rect x="{PAD}" y="{baseline-LINE_H+6}" '
-            f'height="{LINE_H}" width="0">'
+            f'height="{LINE_H + 2}" width="0">'
             f'<animate attributeName="width" from="0" to="{line_w:.1f}" '
             f'begin="{begin:.2f}s" dur="{TYPE_SECS}s" fill="freeze"/>'
             f'</rect></clipPath>'
             f'<g clip-path="url(#{clip_id})">{glyphs}</g>'
         )
-        cx_start = PAD
         cx_end = PAD + line_w
         body.append(
             f'<rect y="{baseline-LINE_H+8}" width="{CURSOR_W}" height="{LINE_H-6}" '
-            f'fill="{cursor_fill}" x="{cx_start:.1f}">'
-            f'<animate attributeName="x" from="{cx_start:.1f}" to="{cx_end:.1f}" '
+            f'fill="{cursor_fill}" x="{PAD:.1f}">'
+            f'<animate attributeName="x" from="{PAD:.1f}" to="{cx_end:.1f}" '
             f'begin="{begin:.2f}s" dur="{TYPE_SECS}s" fill="freeze"/>'
             f'<animate attributeName="opacity" values="1;0;1" dur="1s" '
             f'begin="{(begin+TYPE_SECS):.2f}s" repeatCount="indefinite"/>'
