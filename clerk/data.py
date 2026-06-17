@@ -45,16 +45,14 @@ def _git(args: list) -> str:
 
 
 def rev_count() -> int:
-    """Content commits = all commits minus the clerk-bot's own commits."""
-    total = int(_git(["rev-list", "--count", "HEAD"]))
-    bot = _git(["log", f"--author={CLERK_BOT}", "--oneline"])
-    bot_n = len(bot.splitlines()) if bot else 0
-    return total - bot_n
+    """Content commits = commits whose author is not the clerk bot."""
+    authors = _git(["log", "--format=%an"]).splitlines()
+    return sum(1 for a in authors if a != CLERK_BOT)
 
 
 def last_content_commit_date() -> str:
     """Date (YYYY·MM·DD) of the most recent non-bot commit."""
-    log = _git(["log", "--format=%an%x09%cs", "-n", "200"])
+    log = _git(["log", "--format=%an%x09%cs"])
     for line in log.splitlines():
         author, date = line.split("\t", 1)
         if author != CLERK_BOT:
@@ -66,6 +64,8 @@ def ref_status_from_signals(ref: dict, signals, dormant_days: int) -> RefStatus:
     if ref.get("manual_status"):
         return RefStatus(ref["ref"], ref["title"], ref["domain"],
                          ref["manual_status"], False)
+    if signals is None:
+        return RefStatus(ref["ref"], ref["title"], ref["domain"], "UNKNOWN", False)
     rel = signals.get("release")
     days = signals.get("days_since_push")
     head = f"SHIPPED {rel}" if rel else "ACTIVE"

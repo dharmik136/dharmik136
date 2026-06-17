@@ -1,4 +1,4 @@
-from clerk.data import seal_hash, ref_status_from_signals, log_entries_from_events
+from clerk.data import seal_hash, ref_status_from_signals, log_entries_from_events, rev_count
 
 def test_seal_hash_strips_dynamic_blocks_and_is_stable():
     a = "x\n<!--FOOTER:START-->\nf1\n<!--FOOTER:END-->\n<!--FIELDLOG:START-->\nl1\n<!--FIELDLOG:END-->\n"
@@ -39,3 +39,24 @@ def test_log_entries_phrase_push_events():
     assert entries[0].date == "2026·06·16"
     assert "3 commits" in entries[0].summary
     assert "claude-enter" in entries[0].summary
+
+def test_rev_count_excludes_bot_commits(monkeypatch):
+    import clerk.data as d
+    monkeypatch.setattr(d, "_git", lambda args: "Alice\ndossier-clerk[bot]\nBob\ndossier-clerk[bot]\nAlice")
+    assert d.rev_count() == 3
+
+def test_ref_status_none_signals_is_unknown():
+    s = ref_status_from_signals({"ref": "DRS-9", "title": "t", "domain": "d"}, None, 30)
+    assert s.status_text == "UNKNOWN" and s.dormant is False
+
+def test_log_entries_release_event_phrasing():
+    events = [{"type": "ReleaseEvent", "repo": {"name": "o/proj"},
+               "created_at": "2026-06-15T10:00:00Z",
+               "payload": {"release": {"tag_name": "v1.2"}}}]
+    e = log_entries_from_events(events, limit=5)
+    assert e[0].summary == "proj · released v1.2"
+
+def test_log_entries_respects_limit():
+    events = [{"type": "PushEvent", "repo": {"name": "o/a"},
+               "created_at": "2026-06-16T10:00:00Z", "payload": {"size": 1}}] * 4
+    assert len(log_entries_from_events(events, limit=2)) == 2
