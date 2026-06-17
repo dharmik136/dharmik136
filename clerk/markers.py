@@ -14,4 +14,4 @@ def replace_section(text: str, name: str, inner: str) -> str:
     )
     if not pattern.search(text):
         raise ValueError(f"markers for {name!r} not found")
-    return pattern.sub(f"{start}\n{inner}\n{end}", text)
+    return pattern.sub(lambda m: f"{start}\n{inner}\n{end}", text)
