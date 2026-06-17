@@ -39,3 +39,5 @@ jobs:
             git commit -m "chore: re-file dossier [skip ci]"
             git push
           fi
+      - name: Keepalive (prevent 60-day schedule auto-disable)
+        uses: gautamkrishnar/keepalive-workflow@v2

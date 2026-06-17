@@ -60,6 +60,16 @@ def last_content_commit_date() -> str:
     return datetime.now(timezone.utc).strftime("%Y·%m·%d")
 
 
+def _activity_bucket(days, dormant_days: int) -> str:
+    if days is None:
+        return "recently"
+    if days <= 7:
+        return "this week"
+    if days < dormant_days:
+        return "this month"
+    return "dormant"
+
+
 def ref_status_from_signals(ref: dict, signals, dormant_days: int) -> RefStatus:
     if ref.get("manual_status"):
         return RefStatus(ref["ref"], ref["title"], ref["domain"],
@@ -69,9 +79,9 @@ def ref_status_from_signals(ref: dict, signals, dormant_days: int) -> RefStatus:
     rel = signals.get("release")
     days = signals.get("days_since_push")
     head = f"SHIPPED {rel}" if rel else "ACTIVE"
-    text = f"{head} · last activity {days}d"
-    dormant = days is not None and days >= dormant_days
-    return RefStatus(ref["ref"], ref["title"], ref["domain"], text, dormant)
+    bucket = _activity_bucket(days, dormant_days)
+    return RefStatus(ref["ref"], ref["title"], ref["domain"],
+                     f"{head} · {bucket}", bucket == "dormant")
 
 
 _PHRASE = {

@@ -11,12 +11,23 @@ def test_ref_status_marks_dormant_past_threshold():
         {"ref": "DRS-001", "title": "x", "domain": "d", "repo": "o/r"},
         signals={"release": "v0.1.0", "days_since_push": 3}, dormant_days=30)
     assert fresh.dormant is False
-    assert "SHIPPED v0.1.0" in fresh.status_text
+    assert fresh.status_text == "SHIPPED v0.1.0 · this week"
 
     stale = ref_status_from_signals(
         {"ref": "DRS-002", "title": "y", "domain": "d", "repo": "o/r"},
         signals={"release": None, "days_since_push": 90}, dormant_days=30)
     assert stale.dormant is True
+    assert stale.status_text == "ACTIVE · dormant"
+
+
+def test_activity_bucket_boundaries():
+    from clerk.data import _activity_bucket
+    assert _activity_bucket(0, 30) == "this week"
+    assert _activity_bucket(7, 30) == "this week"
+    assert _activity_bucket(8, 30) == "this month"
+    assert _activity_bucket(29, 30) == "this month"
+    assert _activity_bucket(30, 30) == "dormant"
+    assert _activity_bucket(None, 30) == "recently"
 
 def test_manual_status_ref_bypasses_signals():
     s = ref_status_from_signals(
