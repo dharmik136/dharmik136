@@ -94,14 +94,20 @@ _PHRASE = {
 
 def log_entries_from_events(events: list, limit: int) -> list:
     out = []
+    seen = set()
     for e in events:
         phrase = _PHRASE.get(e["type"])
         if not phrase:
             continue
-        d = datetime.fromisoformat(e["created_at"].replace("Z", "+00:00"))
+        if e["type"] == "PushEvent" and e["payload"].get("size", 0) == 0:
+            continue
         ref = e["repo"]["name"].split("/")[-1]
-        out.append(LogEntry(d.strftime("%Y·%m·%d"),
-                            f"{ref} · {phrase(e)}"))
+        summary = f"{ref} · {phrase(e)}"
+        if summary in seen:
+            continue
+        seen.add(summary)
+        d = datetime.fromisoformat(e["created_at"].replace("Z", "+00:00"))
+        out.append(LogEntry(d.strftime("%Y·%m·%d"), summary))
         if len(out) >= limit:
             break
     return out

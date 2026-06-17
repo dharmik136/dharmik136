@@ -68,6 +68,16 @@ def test_log_entries_release_event_phrasing():
     assert e[0].summary == "proj · released v1.2"
 
 def test_log_entries_respects_limit():
-    events = [{"type": "PushEvent", "repo": {"name": "o/a"},
-               "created_at": "2026-06-16T10:00:00Z", "payload": {"size": 1}}] * 4
+    events = [{"type": "PushEvent", "repo": {"name": f"o/r{i}"},
+               "created_at": "2026-06-16T10:00:00Z", "payload": {"size": 1}} for i in range(4)]
     assert len(log_entries_from_events(events, limit=2)) == 2
+
+def test_log_entries_skips_zero_commit_pushes():
+    events = [{"type": "PushEvent", "repo": {"name": "o/a"}, "created_at": "2026-06-16T10:00:00Z", "payload": {"size": 0}},
+              {"type": "PushEvent", "repo": {"name": "o/b"}, "created_at": "2026-06-16T10:00:00Z", "payload": {"size": 2}}]
+    e = log_entries_from_events(events, 5)
+    assert len(e) == 1 and e[0].summary == "b · 2 commits"
+
+def test_log_entries_dedupes_identical_summaries():
+    events = [{"type": "PushEvent", "repo": {"name": "o/a"}, "created_at": "2026-06-16T10:00:00Z", "payload": {"size": 1}}] * 3
+    assert len(log_entries_from_events(events, 5)) == 1
