@@ -15,7 +15,6 @@
   <line class="rule-fine" x1="48" y1="44" x2="1152" y2="44" />
 
   <text class="mono muted" x="48" y="28" font-size="11" letter-spacing="3">REF · DRS-001 · OPEN</text>
-  <text class="mono muted" x="1152" y="28" font-size="11" letter-spacing="3" text-anchor="end">FILED · 2026 · 05 · 19</text>
 
   <!-- corner stamp -->
   <g transform="translate(48,80) rotate(-6)">
@@ -33,5 +32,4 @@
   <line class="rule" x1="48" y1="268" x2="1152" y2="268" />
 
   <text class="mono muted" x="48" y="290" font-size="11" letter-spacing="3">FILED UNDER &#x2022; ITSM &#x2022; OBSERVABILITY &#x2022; CONTENT STRATEGY</text>
-  <text class="mono muted" x="1152" y="290" font-size="11" letter-spacing="3" text-anchor="end">ENTRY &#x2116; 1</text>
 </svg>

@@ -1,0 +1,4 @@
+PyYAML==6.0.2
+requests==2.32.3
+fonttools==4.53.1
+pytest==8.3.2

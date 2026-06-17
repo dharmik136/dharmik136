@@ -1,0 +1,43 @@
+name: dossier-clerk
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # ~daily, off top-of-hour congestion (best-effort)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dossier-clerk
+  cancel-in-progress: false
+
+jobs:
+  refile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history for REV count
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -r requirements.txt
+      - name: Run the clerk
+        env:
+          DOSSIER_READ_TOKEN: ${{ secrets.DOSSIER_READ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m clerk.main
+      - name: Commit if changed
+        run: |
+          git config user.name "dossier-clerk[bot]"
+          git config user.email "dossier-clerk[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "no changes to re-file"
+          else
+            git commit -m "chore: re-file dossier [skip ci]"
+            git push
+          fi
+      - name: Keepalive (prevent 60-day schedule auto-disable)
+        uses: gautamkrishnar/keepalive-workflow@v2
