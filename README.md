@@ -29,10 +29,10 @@ I write the docs and capability pages, and ship the small **Python / PowerShell*
 %%{init: {'theme':'base','themeVariables':{'pie1':'#2563eb','pie2':'#22c55e','pie3':'#f97316','pie4':'#a855f7'}}}%%
 pie showData
   title Where my work goes
-  "Observability" : 35
-  "Content & docs" : 30
-  "ITSM / ITIL" : 20
-  "Tooling" : 15
+  "Capability pages & docs" : 45
+  "SEO & research" : 20
+  "RFPs & reviews" : 20
+  "Tools & automation" : 15
 ```
 
 ## &nbsp;🧰 &nbsp;Stack &amp; Domain
