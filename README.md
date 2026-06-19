@@ -23,6 +23,17 @@
 **Product & content for IT operations** — observability, monitoring, and ITSM at **[Motadata](https://www.motadata.com)**.
 I write the docs and capability pages, and ship the small **Python / PowerShell** tools that make the work faster — across the ObserveOps and ServiceOps lines. I care about deciding what to defend before writing a word, and about building the small tool when the workflow needs one that doesn't exist.
 
+## &nbsp;📊 &nbsp;By the Numbers
+
+<div align="center">
+
+![Product lines](https://img.shields.io/badge/Product_lines-2-2563eb?style=for-the-badge)
+![Modules covered](https://img.shields.io/badge/Modules_covered-12-22c55e?style=for-the-badge)
+![Domains](https://img.shields.io/badge/Domains-Observability_%2B_ITSM-f97316?style=for-the-badge)
+![Builds](https://img.shields.io/badge/Builds-Python_%2B_PowerShell-a855f7?style=for-the-badge)
+
+</div>
+
 ## &nbsp;🧭 &nbsp;What I Work On
 
 ```mermaid
@@ -33,6 +44,29 @@ pie showData
   "SEO & research" : 20
   "RFPs & reviews" : 20
   "Tools & automation" : 15
+```
+
+## &nbsp;🗺️ &nbsp;Modules I Write For
+
+> The product surface I cover — two lines, twelve modules.
+
+```mermaid
+flowchart TB
+  OO(["ObserveOps"]):::line --> APM["APM"]:::obs
+  OO --> RUM["RUM"]:::obs
+  OO --> SLO["SLO"]:::obs
+  OO --> LOG["Log Analytics"]:::obs
+  OO --> NET["Network"]:::obs
+  OO --> NCCM["NCCM"]:::obs
+  OO --> INFRA["Hybrid Infra"]:::obs
+  SO(["ServiceOps"]):::line --> SM["Service Mgmt"]:::svc
+  SO --> ITAM["ITAM / CMDB"]:::svc
+  SO --> PATCH["Patch Mgmt"]:::svc
+  SO --> AGI["Agentic AI"]:::svc
+  SO --> MSP["MSP Edition"]:::svc
+  classDef line fill:#1a2980,stroke:#0b1240,color:#fff
+  classDef obs fill:#2563eb,stroke:#1e40af,color:#fff
+  classDef svc fill:#22c55e,stroke:#15803d,color:#fff
 ```
 
 ## &nbsp;🧰 &nbsp;Stack &amp; Domain
@@ -199,6 +233,33 @@ gitGraph
 A Claude-powered blog pipeline: validates topics against Ahrefs data, drafts SEO-optimized posts, validates them, and publishes — orchestrated with GitHub Actions so the cadence doesn't depend on anyone remembering.
 
 </details>
+
+## &nbsp;🧩 &nbsp;How It All Fits
+
+> The content system as a model — every page traces back to an approved claim and a module boundary.
+
+```mermaid
+erDiagram
+  MODULE ||--o{ CAPABILITY_PAGE : documents
+  MODULE ||--o{ RFP_ANSWER : feeds
+  KEYWORD ||--o{ CONTENT_BRIEF : drives
+  CONTENT_BRIEF ||--|| CAPABILITY_PAGE : becomes
+  CAPABILITY_PAGE ||--o{ APPROVED_CLAIM : cites
+  CAPABILITY_PAGE ||--o{ INTERNAL_LINK : links
+```
+
+## &nbsp;🧰 &nbsp;How I Build Tools
+
+```mermaid
+flowchart LR
+  S["Spot a repetitive step"]:::a --> W["Write a small tool"]:::b
+  W --> G["Wire it to GitHub Actions"]:::c
+  G --> R["Toil removed"]:::d
+  classDef a fill:#2563eb,stroke:#1e40af,color:#fff
+  classDef b fill:#f97316,stroke:#c2410c,color:#fff
+  classDef c fill:#a855f7,stroke:#7e22ce,color:#fff
+  classDef d fill:#22c55e,stroke:#15803d,color:#fff
+```
 
 ## &nbsp;🧪 &nbsp;Experiments &amp; Smaller Tools
 
