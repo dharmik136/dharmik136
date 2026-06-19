@@ -1,21 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 300" width="340" height="300" role="img" aria-label="A sikku kolam drawn as one unbroken line around a grid of dots — no loose ends.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 360" width="380" height="360" role="img" aria-label="A sikku kolam drawn as one unbroken twelve-point line around a grid of dots — no loose ends.">
   <defs>
-    <filter id="kg" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <linearGradient id="kline" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2dd4bf"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+    <filter id="kg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="kline" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2dd4bf"/><stop offset="50%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
   </defs>
 
-  <!-- pulli (dots) -->
+  <!-- pulli (dot grid the line weaves around) -->
   <g fill="#475569">
-    <circle cx="170" cy="55" r="2.4"/><circle cx="113" cy="83" r="2.4"/><circle cx="85" cy="150" r="2.4"/><circle cx="113" cy="217" r="2.4"/>
-    <circle cx="170" cy="245" r="2.4"/><circle cx="227" cy="217" r="2.4"/><circle cx="255" cy="150" r="2.4"/><circle cx="227" cy="83" r="2.4"/>
-    <circle cx="170" cy="150" r="2.4"/>
+    <circle cx="190" cy="45" r="2.6"/><circle cx="255" cy="62.4" r="2.6"/><circle cx="302.6" cy="110" r="2.6"/><circle cx="320" cy="175" r="2.6"/>
+    <circle cx="302.6" cy="240" r="2.6"/><circle cx="255" cy="287.6" r="2.6"/><circle cx="190" cy="305" r="2.6"/><circle cx="125" cy="287.6" r="2.6"/>
+    <circle cx="77.4" cy="240" r="2.6"/><circle cx="60" cy="175" r="2.6"/><circle cx="77.4" cy="110" r="2.6"/><circle cx="125" cy="62.4" r="2.6"/>
+    <circle cx="190" cy="175" r="2.6"/>
   </g>
 
-  <!-- one continuous {8/3} knot, glow underlay + drawn-on stroke -->
-  <path d="M170,55 L113,217 L255,150 L113,83 L170,245 L227,83 L85,150 L227,217 Z" fill="none" stroke="url(#kline)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.18" filter="url(#kg)"/>
-  <path d="M170,55 L113,217 L255,150 L113,83 L170,245 L227,83 L85,150 L227,217 Z" fill="none" stroke="url(#kline)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1700" stroke-dashoffset="1560">
-    <animate attributeName="stroke-dashoffset" from="1560" to="0" dur="3s" begin="0.2s" fill="freeze"/>
-    <animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="3.2s" repeatCount="indefinite"/>
+  <!-- one continuous {12/5} knot: glow underlay + drawn-on stroke -->
+  <path d="M190,45 L255,287.6 L77.4,110 L320,175 L77.4,240 L255,62.4 L190,305 L125,62.4 L302.6,240 L60,175 L302.6,110 L125,287.6 Z" fill="none" stroke="url(#kline)" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.16" filter="url(#kg)"/>
+  <path d="M190,45 L255,287.6 L77.4,110 L320,175 L77.4,240 L255,62.4 L190,305 L125,62.4 L302.6,240 L60,175 L302.6,110 L125,287.6 Z" fill="none" stroke="url(#kline)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3300" stroke-dashoffset="3040">
+    <animate attributeName="stroke-dashoffset" from="3040" to="0" dur="3.6s" begin="0.2s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="3.8s" repeatCount="indefinite"/>
   </path>
-  <circle cx="170" cy="150" r="4" fill="#f59e0b" filter="url(#kg)"/>
+
+  <!-- center flower -->
+  <circle cx="190" cy="175" r="22" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="2 5"/>
+  <circle cx="190" cy="175" r="11" fill="#0b0f17" stroke="#2dd4bf" stroke-width="1.5"/>
+  <circle cx="190" cy="175" r="4.5" fill="#f59e0b" filter="url(#kg)"/>
 </svg>

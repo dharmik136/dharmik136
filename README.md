@@ -95,7 +95,7 @@ I write the docs and capability pages, and ship the small **Python / PowerShell*
 
 <div align="center">
 
-<img src="./art/kolam.svg" width="300" alt="A sikku kolam — one unbroken line, no loose ends." />
+<img src="./art/kolam.svg" width="340" alt="A sikku kolam — one unbroken line, no loose ends." />
 
 <sub>A sikku kolam — one unbroken line, no loose ends. The way I like a system to run.</sub>
 
