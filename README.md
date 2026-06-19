@@ -17,13 +17,13 @@
 **Product & content for IT operations** — observability, monitoring, and ITSM at **[Motadata](https://www.motadata.com)**.
 I write the docs and capability pages, and ship the small **Python / PowerShell** tools that make the work faster — across the ObserveOps and ServiceOps lines. I care about deciding what to defend before writing a word, and about building the small tool when the workflow needs one that doesn't exist.
 
-## &nbsp;🌍 &nbsp;Based in Gujarat, India
+## &nbsp;🪁 &nbsp;Uttarayan Uplink — Building from Gujarat
 
 <div align="center">
 
-<img src="./art/globe.svg" width="440" alt="Particle gradient globe with a pin on Gujarat, India" />
+<img src="./art/uttarayan.svg" width="520" alt="Patang kites rising on taut manjha strings from a glowing home node in Gujarat, India (22.3N, 72.6E) — small precise things on one controlled line, reaching teams everywhere." />
 
-<sub>Building for IT teams everywhere — from Gujarat, India 🪁</sub>
+<sub>Flying small, precise things on a single line — from Gujarat, India 🪁</sub>
 
 </div>
 
