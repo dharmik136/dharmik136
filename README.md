@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./art/hero.svg" width="900" alt="Dharmik Shingala — Product & content for IT operations at Motadata. Observability + ITSM. Principles: decide what to defend first, write second; specificity is the only luxury that scales; build the small tool when none exists." />
+<img src="./art/hero.svg" width="820" alt="Dharmik Shingala — Product & content for IT operations at Motadata. Observability + ITSM. Principles: decide what to defend first, write second; specificity is the only luxury that scales; build the small tool when none exists." />
 
 &nbsp;
 
@@ -21,7 +21,7 @@ I write the docs and capability pages, and ship the small **Python / PowerShell*
 
 <div align="center">
 
-<img src="./art/uttarayan.svg" width="520" alt="Patang kites rising on taut manjha strings from a glowing home node in Gujarat, India (22.3N, 72.6E) — small precise things on one controlled line, reaching teams everywhere." />
+<img src="./art/uttarayan.svg" width="600" alt="Patang kites rising on taut manjha strings from a glowing home node in Gujarat, India (22.3N, 72.6E) — small precise things on one controlled line, reaching teams everywhere." />
 
 <sub>Flying small, precise things on a single line — from Gujarat, India 🪁</sub>
 
@@ -33,7 +33,7 @@ I write the docs and capability pages, and ship the small **Python / PowerShell*
 
 <div align="center">
 
-<img src="./art/signal-field.svg" width="780" alt="ObserveOps core fed by APM, RUM, SLO, Logs, Network, NCCM, Hybrid Infra; ServiceOps core fed by Service Management, ITAM/CMDB, Patch Management, Agentic AI, MSP — 2 lines, 12 modules, telemetry flowing inward." />
+<img src="./art/signal-field.svg" width="820" alt="ObserveOps core fed by APM, RUM, SLO, Logs, Network, NCCM, Hybrid Infra; ServiceOps core fed by Service Management, ITAM/CMDB, Patch Management, Agentic AI, MSP — 2 lines, 12 modules, telemetry flowing inward." />
 
 </div>
 
@@ -43,7 +43,7 @@ I write the docs and capability pages, and ship the small **Python / PowerShell*
 
 <div align="center">
 
-<img src="./art/operating-loop.svg" width="780" alt="Three principles power a continuous loop: Defend, Write, Ship, Measure." />
+<img src="./art/operating-loop.svg" width="820" alt="Three principles power a continuous loop: Defend, Write, Ship, Measure." />
 
 </div>
 
@@ -53,13 +53,13 @@ I write the docs and capability pages, and ship the small **Python / PowerShell*
 
 <div align="center">
 
-<img src="./art/content-line.svg" width="780" alt="The content line: Keyword to Brief to Draft to a Validate gate (which can fail back to Draft) to Publish to Report, feeding the next cycle." />
+<img src="./art/content-line.svg" width="820" alt="The content line: Keyword to Brief to Draft to a Validate gate (which can fail back to Draft) to Publish to Report, feeding the next cycle." />
 
 <br/>
 
-<img src="./art/card-loan.svg" width="408" alt="home-loan-planner — problem: prepayment math is opaque; defended: clarity over a spreadsheet; outcome: a decision, not a number." />
+<img src="./art/card-loan.svg" width="404" alt="home-loan-planner — problem: prepayment math is opaque; defended: clarity over a spreadsheet; outcome: a decision, not a number." />
 &nbsp;
-<img src="./art/card-page.svg" width="408" alt="motadata-page-builder — problem: scope drift; defended: claims approved and in-boundary; outcome: publish-ready, on-scope." />
+<img src="./art/card-page.svg" width="404" alt="motadata-page-builder — problem: scope drift; defended: claims approved and in-boundary; outcome: publish-ready, on-scope." />
 
 </div>
 

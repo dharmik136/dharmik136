@@ -19,7 +19,7 @@
   <text x="40" y="40" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11" letter-spacing="3" fill="#3f5168">FIELD CONSOLE // dharmik136</text>
 
   <!-- wordmark (visible at t=0) + one-shot scan line -->
-  <text x="40" y="108" font-family="'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="50" font-weight="800" letter-spacing="1.5" fill="url(#ink)">DHARMIK SHINGALA</text>
+  <text x="40" y="106" font-family="'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="46" font-weight="800" letter-spacing="1.5" fill="url(#ink)">DHARMIK SHINGALA</text>
   <rect x="-50" y="62" width="46" height="62" fill="#2EC4B6" opacity="0" filter="url(#glow)">
     <animate attributeName="x" values="-50;600" dur="2.2s" begin="0.4s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
     <animate attributeName="opacity" values="0;0.45;0" dur="2.2s" begin="0.4s" fill="freeze"/>
@@ -27,12 +27,14 @@
   <text x="42" y="138" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="15" letter-spacing="0.5" fill="#8b949e">Product &amp; content for IT operations &#183; Motadata</text>
 
   <!-- SLO baseline + traveling event dot -->
-  <path id="axis" d="M44,196 H556" fill="none" stroke="#234" stroke-width="2"/>
-  <path d="M44,196 H556" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-opacity="0.35" stroke-dasharray="2 6"/>
+  <path id="axis" d="M44,196 H800" fill="none" stroke="#243349" stroke-width="2"/>
+  <path d="M44,196 H800" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-opacity="0.30" stroke-dasharray="2 6"/>
   <g fill="#22c55e">
-    <circle cx="120" cy="196" r="2.5"/><circle cx="300" cy="196" r="2.5"/><circle cx="480" cy="196" r="2.5"/>
+    <circle cx="120" cy="196" r="2.5"/><circle cx="300" cy="196" r="2.5"/><circle cx="480" cy="196" r="2.5"/><circle cx="640" cy="196" r="2.5"/><circle cx="760" cy="196" r="2.5"/>
   </g>
-  <circle r="4.5" fill="#2EC4B6" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#axis"/></animateMotion></circle>
+  <circle r="4.5" fill="#2EC4B6" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#axis"/></animateMotion></circle>
+  <circle cx="628" cy="222" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.35;1" dur="3.2s" repeatCount="indefinite"/></circle>
+  <text x="644" y="226" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="12" letter-spacing="1.5" fill="#6e7e94">ALL SIGNALS NOMINAL</text>
 
   <!-- 3 principles as telemetry events (one visible at a time; #1 visible at t=0) -->
   <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#2EC4B6">
