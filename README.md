@@ -23,6 +23,16 @@
 **Product & content for IT operations** — observability, monitoring, and ITSM at **[Motadata](https://www.motadata.com)**.
 I write the docs and capability pages, and ship the small **Python / PowerShell** tools that make the work faster — across the ObserveOps and ServiceOps lines. I care about deciding what to defend before writing a word, and about building the small tool when the workflow needs one that doesn't exist.
 
+## &nbsp;🌍 &nbsp;Based in Gujarat, India
+
+<div align="center">
+
+<img src="./art/globe.svg" width="440" alt="Particle gradient globe with a pin on Gujarat, India" />
+
+<sub>Building for IT teams everywhere — from Gujarat, India 🪁</sub>
+
+</div>
+
 ## &nbsp;📊 &nbsp;By the Numbers
 
 <div align="center">
@@ -285,6 +295,16 @@ flowchart LR
 - 🛰️ Capability pages and RFP answers across ObserveOps & ServiceOps modules
 - 🔬 SEO research + content automation for motadata.com
 - 🧰 Small tools that remove repetitive steps from the content workflow
+
+## &nbsp;🪁 &nbsp;From Gujarat, With Color
+
+<div align="center">
+
+<img src="./art/rangoli.svg" width="300" alt="Rangoli mandala — Gujarat folk art" />
+
+<sub>A rangoli, the way we draw them for Uttarayan &amp; Diwali — spun up in pure SVG.</sub>
+
+</div>
 
 ## &nbsp;🤝 &nbsp;Reach Me
 
