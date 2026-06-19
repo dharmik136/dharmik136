@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 270" width="820" height="270" role="img" aria-label="The content line: Keyword to Brief to Draft to a Validate gate that defends boundaries (occasionally failing back to Draft) to Publish to Report, which feeds the next cycle.">
+  <defs>
+    <filter id="cg" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="cd" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.1" fill="#141d2e"/></pattern>
+  </defs>
+  <rect width="820" height="270" rx="16" fill="#0b0f17" stroke="#1f2a3a"/>
+  <rect width="820" height="270" rx="16" fill="url(#cd)" opacity="0.6"/>
+  <text x="28" y="34" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11" letter-spacing="3" fill="#3f5168">CONTENT LINE // research &#8594; defend &#8594; ship &#8594; measure</text>
+
+  <!-- racetrack rail (token path); draws in then holds -->
+  <path id="track" d="M92,150 H772 C806,150 806,228 772,228 H92 C58,228 58,150 92,150 Z" fill="none" stroke="#1f3147" stroke-width="2"/>
+  <path d="M92,150 H772 C806,150 806,228 772,228 H92 C58,228 58,150 92,150 Z" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="1500" stroke-dashoffset="1200"><animate attributeName="stroke-dashoffset" from="1500" to="0" dur="2.4s" begin="0.2s" fill="freeze"/></path>
+  <text x="430" y="222" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="10.5" fill="#3f5168">report feeds the next cycle &#8594;</text>
+
+  <!-- fails-revise return arc -->
+  <path d="M506,134 C466,96 410,96 372,132" fill="none" stroke="#ef4444" stroke-opacity="0.7" stroke-width="1.6" stroke-dasharray="4 4"/>
+  <text x="438" y="92" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="10.5" fill="#f87171">fails &#183; revise</text>
+
+  <!-- stage nodes -->
+  <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11" text-anchor="middle" fill="#c9d1d9">
+    <g transform="translate(92,150)"><rect x="-40" y="-15" width="80" height="30" rx="8" fill="#0f1626" stroke="#27425e"/><text y="4">Keyword</text></g>
+    <g transform="translate(228,150)"><rect x="-34" y="-15" width="68" height="30" rx="8" fill="#0f1626" stroke="#27425e"/><text y="4">Brief</text></g>
+    <g transform="translate(368,150)"><rect x="-36" y="-15" width="72" height="30" rx="8" fill="#0f1626" stroke="#27425e"/><text y="4">Draft</text></g>
+    <!-- validate gate (diamond) -->
+    <g transform="translate(508,150)">
+      <rect x="-22" y="-22" width="44" height="44" rx="6" transform="rotate(45)" fill="#0f2018" stroke="#2EC4B6" stroke-width="2"/>
+      <path d="M-8,1 l5,6 l11,-13" fill="none" stroke="#2EC4B6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <animate attributeName="stroke-opacity" values="1;0.25;1" dur="3.5s" repeatCount="indefinite"/></path>
+      <text y="42" font-size="11" fill="#7fe7d6">VALIDATE</text>
+    </g>
+    <g transform="translate(640,150)"><rect x="-38" y="-15" width="76" height="30" rx="8" fill="#0f1626" stroke="#1c7a4a"/><text y="4" fill="#cdf6dd">Publish</text></g>
+    <g transform="translate(760,150)"><rect x="-36" y="-15" width="72" height="30" rx="8" fill="#0f1626" stroke="#1c7a4a"/><text y="4" fill="#cdf6dd">Report</text></g>
+  </g>
+
+  <!-- the work token riding the line -->
+  <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#2EC4B6" filter="url(#cg)"><animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#track"/></animateMotion></rect>
+</svg>

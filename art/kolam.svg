@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 300" width="340" height="300" role="img" aria-label="A sikku kolam drawn as one unbroken line around a grid of dots — no loose ends.">
+  <defs>
+    <filter id="kg" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="kline" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2dd4bf"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+
+  <!-- pulli (dots) -->
+  <g fill="#475569">
+    <circle cx="170" cy="55" r="2.4"/><circle cx="113" cy="83" r="2.4"/><circle cx="85" cy="150" r="2.4"/><circle cx="113" cy="217" r="2.4"/>
+    <circle cx="170" cy="245" r="2.4"/><circle cx="227" cy="217" r="2.4"/><circle cx="255" cy="150" r="2.4"/><circle cx="227" cy="83" r="2.4"/>
+    <circle cx="170" cy="150" r="2.4"/>
+  </g>
+
+  <!-- one continuous {8/3} knot, glow underlay + drawn-on stroke -->
+  <path d="M170,55 L113,217 L255,150 L113,83 L170,245 L227,83 L85,150 L227,217 Z" fill="none" stroke="url(#kline)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" opacity="0.18" filter="url(#kg)"/>
+  <path d="M170,55 L113,217 L255,150 L113,83 L170,245 L227,83 L85,150 L227,217 Z" fill="none" stroke="url(#kline)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1700" stroke-dashoffset="1560">
+    <animate attributeName="stroke-dashoffset" from="1560" to="0" dur="3s" begin="0.2s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="5s" begin="3.2s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="170" cy="150" r="4" fill="#f59e0b" filter="url(#kg)"/>
+</svg>
