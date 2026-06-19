@@ -1,20 +1,14 @@
 <div align="center">
 
-# Dharmik Shingala
+<img src="./art/hero.svg" width="900" alt="Dharmik Shingala — Product & content for IT operations at Motadata. Observability + ITSM. Principles: decide what to defend first, write second; specificity is the only luxury that scales; build the small tool when none exists." />
 
-#### Product &amp; Content for IT Operations
+&nbsp;
 
-<a href="https://github.com/dharmik136">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=900&color=2EC4B6&center=true&vCenter=true&width=860&height=50&lines=Observability+%C2%B7+Monitoring+%C2%B7+ITSM;I+write+the+docs+and+ship+the+small+tools;APM+%C2%B7+RUM+%C2%B7+SLO+%C2%B7+Logs+%C2%B7+Network+%C2%B7+ITIL" alt="What I do" />
-</a>
-
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=dharmik136&style=for-the-badge&color=2ec4b6&label=PROFILE+VIEWS" alt="profile views" />
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aatmaa)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dhashingala9@gmail.com)
-[![Motadata](https://img.shields.io/badge/Motadata-1A2980?style=for-the-badge&logo=grafana&logoColor=white)](https://www.motadata.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aatmaa)
+&nbsp;
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:dhashingala9@gmail.com)
+&nbsp;
+[![Motadata](https://img.shields.io/badge/Motadata-1A2980?style=flat-square&logo=grafana&logoColor=white)](https://www.motadata.com)
 
 </div>
 

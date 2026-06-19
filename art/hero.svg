@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="900" height="250" role="img" aria-label="Dharmik Shingala — Product and content for IT operations at Motadata. Observability and ITSM.">
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.1" fill="#172033"/></pattern>
+    <radialGradient id="vig" cx="35%" cy="20%" r="95%"><stop offset="55%" stop-color="#0b0f17" stop-opacity="0"/><stop offset="100%" stop-color="#05070c"/></radialGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e6edf3"/><stop offset="100%" stop-color="#9fb3c8"/></linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="896" height="246" rx="16" fill="#0b0f17" stroke="#1f2a3a" stroke-width="1.5"/>
+  <rect x="2" y="2" width="896" height="246" rx="16" fill="url(#grid)" opacity="0.6"/>
+  <rect x="2" y="2" width="896" height="246" rx="16" fill="url(#vig)"/>
+
+  <!-- bezel corner ticks -->
+  <g stroke="#2EC4B6" stroke-width="2" stroke-opacity="0.7" fill="none">
+    <path d="M22,40 V22 H40"/><path d="M860,22 H878 V40"/><path d="M22,210 V228 H40"/><path d="M878,210 V228 H860"/>
+  </g>
+  <text x="40" y="40" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11" letter-spacing="3" fill="#3f5168">FIELD CONSOLE // dharmik136</text>
+
+  <!-- wordmark (visible at t=0) + one-shot scan line -->
+  <text x="40" y="108" font-family="'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="50" font-weight="800" letter-spacing="1.5" fill="url(#ink)">DHARMIK SHINGALA</text>
+  <rect x="-50" y="62" width="46" height="62" fill="#2EC4B6" opacity="0" filter="url(#glow)">
+    <animate attributeName="x" values="-50;600" dur="2.2s" begin="0.4s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="opacity" values="0;0.45;0" dur="2.2s" begin="0.4s" fill="freeze"/>
+  </rect>
+  <text x="42" y="138" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="15" letter-spacing="0.5" fill="#8b949e">Product &amp; content for IT operations &#183; Motadata</text>
+
+  <!-- SLO baseline + traveling event dot -->
+  <path id="axis" d="M44,196 H556" fill="none" stroke="#234" stroke-width="2"/>
+  <path d="M44,196 H556" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-opacity="0.35" stroke-dasharray="2 6"/>
+  <g fill="#22c55e">
+    <circle cx="120" cy="196" r="2.5"/><circle cx="300" cy="196" r="2.5"/><circle cx="480" cy="196" r="2.5"/>
+  </g>
+  <circle r="4.5" fill="#2EC4B6" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#axis"/></animateMotion></circle>
+
+  <!-- 3 principles as telemetry events (one visible at a time; #1 visible at t=0) -->
+  <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#2EC4B6">
+    <text x="44" y="222">▸ decide what to defend first &#183; write second
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.30;0.345;1" dur="6s" repeatCount="indefinite"/></text>
+    <text x="44" y="222">▸ specificity is the only luxury that scales
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.345;0.39;0.63;0.675;1" dur="6s" repeatCount="indefinite"/></text>
+    <text x="44" y="222">▸ build the small tool when none exists
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.675;0.72;0.97;1" dur="6s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- right status stack -->
+  <g font-family="ui-monospace,Menlo,Consolas,monospace">
+    <g transform="translate(590,74)">
+      <rect x="0" y="-16" width="270" height="30" rx="8" fill="#0f1626" stroke="#1f2a3a"/>
+      <circle cx="18" cy="0" r="5" fill="#22c55e"><animate attributeName="opacity" values="1;0.35;1" dur="3.2s" begin="-0.4s" repeatCount="indefinite"/></circle>
+      <text x="34" y="-2" font-size="11" letter-spacing="1.5" fill="#6e7e94">OBSERVABILITY</text>
+      <text x="34" y="11" font-size="11.5" fill="#c9d1d9">APM &#183; RUM &#183; SLO &#183; Logs</text>
+    </g>
+    <g transform="translate(590,123)">
+      <rect x="0" y="-16" width="270" height="30" rx="8" fill="#0f1626" stroke="#1f2a3a"/>
+      <circle cx="18" cy="0" r="5" fill="#22c55e"><animate attributeName="opacity" values="1;0.35;1" dur="3.2s" begin="-1.5s" repeatCount="indefinite"/></circle>
+      <text x="34" y="-2" font-size="11" letter-spacing="1.5" fill="#6e7e94">ITSM</text>
+      <text x="34" y="11" font-size="11.5" fill="#c9d1d9">ITIL &#183; ServiceOps</text>
+    </g>
+    <g transform="translate(590,172)">
+      <rect x="0" y="-16" width="270" height="30" rx="8" fill="#0f1626" stroke="#1f2a3a"/>
+      <circle cx="18" cy="0" r="5" fill="#f59e0b"><animate attributeName="opacity" values="1;0.4;1" dur="3.2s" begin="-2.4s" repeatCount="indefinite"/></circle>
+      <text x="34" y="-2" font-size="11" letter-spacing="1.5" fill="#6e7e94">BUILDS</text>
+      <text x="34" y="11" font-size="11.5" fill="#c9d1d9">Python &#183; PowerShell</text>
+    </g>
+  </g>
+</svg>
