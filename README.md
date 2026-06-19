@@ -27,51 +27,15 @@ I write the docs and capability pages, and ship the small **Python / PowerShell*
 
 </div>
 
-## &nbsp;📊 &nbsp;By the Numbers
+## &nbsp;📡 &nbsp;The Surface I Steward
+
+> Two product lines, twelve modules, one operations story — telemetry flowing into two cores.
 
 <div align="center">
 
-![Product lines](https://img.shields.io/badge/Product_lines-2-2563eb?style=for-the-badge)
-![Modules covered](https://img.shields.io/badge/Modules_covered-12-22c55e?style=for-the-badge)
-![Domains](https://img.shields.io/badge/Domains-Observability_%2B_ITSM-f97316?style=for-the-badge)
-![Builds](https://img.shields.io/badge/Builds-Python_%2B_PowerShell-a855f7?style=for-the-badge)
+<img src="./art/signal-field.svg" width="780" alt="ObserveOps core fed by APM, RUM, SLO, Logs, Network, NCCM, Hybrid Infra; ServiceOps core fed by Service Management, ITAM/CMDB, Patch Management, Agentic AI, MSP — 2 lines, 12 modules, telemetry flowing inward." />
 
 </div>
-
-## &nbsp;🧭 &nbsp;What I Work On
-
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'pie1':'#2563eb','pie2':'#22c55e','pie3':'#f97316','pie4':'#a855f7'}}}%%
-pie showData
-  title Where my work goes
-  "Capability pages & docs" : 45
-  "SEO & research" : 20
-  "RFPs & reviews" : 20
-  "Tools & automation" : 15
-```
-
-## &nbsp;🗺️ &nbsp;Modules I Write For
-
-> The product surface I cover — two lines, twelve modules.
-
-```mermaid
-flowchart TB
-  OO(["ObserveOps"]):::line --> APM["APM"]:::obs
-  OO --> RUM["RUM"]:::obs
-  OO --> SLO["SLO"]:::obs
-  OO --> LOG["Log Analytics"]:::obs
-  OO --> NET["Network"]:::obs
-  OO --> NCCM["NCCM"]:::obs
-  OO --> INFRA["Hybrid Infra"]:::obs
-  SO(["ServiceOps"]):::line --> SM["Service Mgmt"]:::svc
-  SO --> ITAM["ITAM / CMDB"]:::svc
-  SO --> PATCH["Patch Mgmt"]:::svc
-  SO --> AGI["Agentic AI"]:::svc
-  SO --> MSP["MSP Edition"]:::svc
-  classDef line fill:#1a2980,stroke:#0b1240,color:#fff
-  classDef obs fill:#2563eb,stroke:#1e40af,color:#fff
-  classDef svc fill:#22c55e,stroke:#15803d,color:#fff
-```
 
 ## &nbsp;🧰 &nbsp;Stack &amp; Domain
 
